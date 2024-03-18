@@ -1,0 +1,49 @@
+:root {
+    --primary-colour: #fff;
+    --secondary-colour: #257029;
+    --tertiary-colour: #BBBBBB;
+    --primary-font-size: 16px;
+}
+
+* {
+    font-size: var(--primary-font-size);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: var(--primary-colour);
+    color: var(--secondary-colour);
+    padding: 5px 10px;
+    font-weight: bold;
+    border: solid var(--secondary-colour) 2px;
+    border-radius: 5px;
+    border-color: var(--secondary-colour);
+    margin: 10px 5px;
+}
+
+button:hover {
+    background-color: var(--secondary-colour);
+    color: var(--primary-colour);
+}
+
+input {
+    min-width: 400px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: solid var(--secondary-colour) 2px;
+    margin: 10px 5px;
+}
+
+ul { 
+    margin: 5px;
+    padding: 0;
+}
+li {
+    margin: 5px 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: var(--secondary-colour)
+}
