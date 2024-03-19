@@ -26,6 +26,17 @@ button:hover {
     color: var(--primary-colour);
 }
 
+#delete-btn {
+    background-color: var(--primary-colour);
+    color: #cf1919; 
+    border-color: #cf1919;
+}
+
+#delete-btn:hover {
+    background-color: #cf1919;
+    color: var(--primary-colour); 
+}
+
 input {
     min-width: 400px;
     padding: 5px 10px;

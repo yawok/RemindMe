@@ -1,33 +1,40 @@
 let ulEl = document.getElementById("ul-el")
-let inputEl = document.getElementById("input-el")
-let saveButton = document.getElementById("save-btn")
+const inputEl = document.getElementById("input-el")
+const saveButton = document.getElementById("save-btn")
+const deleteButton = document.getElementById("delete-btn")
 let links = []
-let savedLinks = JSON.parse(localStorage.getItem("links"))
+const savedLinks = JSON.parse(localStorage.getItem("links"))
 
 if (savedLinks) {
     links = savedLinks
-    renderLinks()
+    render(links)
+}
+
+function render(aList) {
+    let linksList = ""
+    for (i in aList) {
+        linksList += `
+        <li>
+            <a target='_blank' href='https://${aList[i]}'>
+                ${aList[i]}
+            </a>
+        </li>`
+    }
+    ulEl.innerHTML = linksList
 }
 
 saveButton.addEventListener("click", () => {
     let value = inputEl.value
     if (value != "") {
         links.push(value)
+        localStorage.setItem('links', JSON.stringify(links))
         inputEl.value = ""
-        renderLinks()
+        render(links)
     }
 })
 
-function renderLinks() {
-    let linksList = ""
-    for (i in links) {
-        linksList += `
-        <li>
-            <a target='_blank' href='https://${links[i]}'>
-                ${links[i]}
-            </a>
-        </li>`
-    }
-    localStorage.setItem('links', JSON.stringify(links))
-    ulEl.innerHTML = linksList
-}
+deleteButton.addEventListener("dblclick", () => {
+    localStorage.clear()
+    links = []
+    render(links)
+})
