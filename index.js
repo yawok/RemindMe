@@ -2,6 +2,12 @@ let ulEl = document.getElementById("ul-el")
 let inputEl = document.getElementById("input-el")
 let saveButton = document.getElementById("save-btn")
 let links = []
+let savedLinks = JSON.parse(localStorage.getItem("links"))
+
+if (savedLinks) {
+    links = savedLinks
+    renderLinks()
+}
 
 saveButton.addEventListener("click", () => {
     let value = inputEl.value
@@ -22,5 +28,6 @@ function renderLinks() {
             </a>
         </li>`
     }
+    localStorage.setItem('links', JSON.stringify(links))
     ulEl.innerHTML = linksList
 }
