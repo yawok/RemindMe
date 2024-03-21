@@ -1,65 +1,74 @@
 :root {
-    --primary-colour: #fff;
-    --secondary-colour: #257029;
-    --tertiary-colour: #BBBBBB;
-    --primary-font-size: 16px;
+  --primary-colour: #fff;
+  --secondary-colour: #257029;
+  --tertiary-colour: #25702998;
+  --primary-font-size: 16px;
 }
 
 * {
-    font-size: var(--primary-font-size);
-    font-family:Arial, Helvetica, sans-serif;
+  font-size: var(--primary-font-size);
+  color: var(--secondary-colour);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0 5px;
+  padding: 0;
+  width: 100%;
+}
+
+p {
+  margin: 1px 5px 10px 5px;
+  color: var(--tertiary-colour);
 }
 
 button {
-    background-color: var(--primary-colour);
-    color: var(--secondary-colour);
-    padding: 5px 10px;
-    font-weight: bold;
-    border: solid var(--secondary-colour) 2px;
-    border-radius: 5px;
-    border-color: var(--secondary-colour);
-    margin: 10px 5px;
+  background-color: var(--primary-colour);
+  color: var(--secondary-colour);
+  padding: 5px 10px;
+  font-weight: bold;
+  border: solid var(--secondary-colour) 2px;
+  border-radius: 5px;
+  border-color: var(--secondary-colour);
+  margin: 10px 5px;
 }
 
 button:hover {
-    background-color: var(--secondary-colour);
-    color: var(--primary-colour);
-}
-
-#save-btn:disabled {
-    background-color: #637564;
-    color: #637564; 
+  background-color: var(--secondary-colour);
+  color: var(--primary-colour);
 }
 
 #delete-btn {
-    background-color: var(--primary-colour);
-    color: #cf1919; 
-    border-color: #cf1919;
+  background-color: var(--primary-colour);
+  color: #cf1919;
+  border-color: #cf1919;
 }
 
 #delete-btn:hover {
-    background-color: #cf1919;
-    color: var(--primary-colour); 
+  background-color: #cf1919;
+  color: var(--primary-colour);
 }
 
 input {
-    min-width: 400px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: solid var(--secondary-colour) 2px;
-    margin: 10px 5px;
+  min-width: 400px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: solid var(--secondary-colour) 2px;
+  margin: 10px 5px;
 }
 
-ul { 
-    margin: 5px;
-    padding: 0;
+ul {
+  margin: 5px;
+  padding: 0;
 }
 li {
-    margin: 5px 0;
-    padding: 0;
-    list-style: none;
+  margin: 5px 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
-    color: var(--secondary-colour)
+  color: var(--secondary-colour);
 }
