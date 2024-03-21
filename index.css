@@ -26,6 +26,11 @@ button:hover {
     color: var(--primary-colour);
 }
 
+#save-btn:disabled {
+    background-color: #637564;
+    color: #637564; 
+}
+
 #delete-btn {
     background-color: var(--primary-colour);
     color: #cf1919; 
