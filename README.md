@@ -15,4 +15,5 @@ A Chrome extension that reminds you to visit saved links.
 ![Image 2](readme_images/img2.png)
 ![Image 2](readme_images/img3.png)
 
-:skull: Currently not available on the Chrome extension store.
+
+### :skull: Currently not available on the Chrome extension store.
